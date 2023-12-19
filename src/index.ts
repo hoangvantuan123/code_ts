@@ -1,5 +1,3 @@
-const _ = require('lodash')
-
 // Variables : var , let, const
 const myVariable: string = 'Hello, TypeScript!'
 const numVariable: number = 50

@@ -39,8 +39,9 @@ console.log(typeof userPersonTrue) // "object"
 
 //3
 //any khong xac dinh
+//unknown
 type AnyObject = {
-  [key: string]: any
+  [key: string]: unknown
 }
 
 const objectAny: AnyObject = {
@@ -133,7 +134,7 @@ const objGenericArray: GenericArray<objectNested> = {
 
 // Functions filter, find, Map
 const filterNumber: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const filterArry: GenericArray<objectNested> = {
+export const Data: GenericArray<objectNested> = {
   items: [
     {
       id: 1,
@@ -172,9 +173,9 @@ const evenNumbers = filterNumber.filter((n) => n % 2 === 0)
 const findNumber = filterNumber.find((n) => n === 3)
 const mapNumber = filterNumber.map((num) => num * 2)
 // voi obj
-const filterData = filterArry.items.filter((item) => item.age === 10)
-const findData = filterArry.items.find((item) => item.gender === 'nam')
-const mapData = filterArry.items.map((items) => items.age)
+const filterData = Data.items.filter((item) => item.age === 10)
+const findData = Data.items.find((item) => item.gender === 'nam')
+const mapData = Data.items.map((items) => items.age)
 
 //namespace
 // Thong tin: + Sử dụng tổ chức các mã nguồn riêng biệt
